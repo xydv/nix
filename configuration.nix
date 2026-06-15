@@ -34,6 +34,7 @@
     telegram-desktop
     (discord.override {
       withOpenASAR = true;
+      withMoonlight = true;
     })
     helix
     bruno
@@ -44,5 +45,17 @@
     devenv
     nixd
     inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    simplex-chat-desktop
+    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ayugram-desktop
+    ente-desktop
+    mpv
+  ];
+
+  fonts.packages = with pkgs; [
+    andika
+    nerd-fonts.iosevka
+    nerd-fonts.jetbrains-mono
   ];
 }
