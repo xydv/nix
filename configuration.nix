@@ -38,24 +38,29 @@
     })
     helix
     bruno
-    chromium
+    # chromium
     kdePackages.kdenlive
     antigravity
     zed-editor
     devenv
     nixd
     inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    simplex-chat-desktop
+    # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # simplex-chat-desktop
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ayugram-desktop
+    # ayugram-desktop
     ente-desktop
     mpv
+    cloudflare-warp
+    materialgram
+    # ytm-player
+    fprintd
+    # telegram-bot-api
+    # tdl
   ];
 
   fonts.packages = with pkgs; [
     andika
-    nerd-fonts.iosevka
-    nerd-fonts.jetbrains-mono
+    agave
   ];
 }

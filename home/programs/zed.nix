@@ -6,9 +6,9 @@
     extensions = ["crimson-theme"];
     userSettings = {
       ui_font_size = 20;
-      ui_font_family = "Andika";
+      ui_font_family = "Agave";
       buffer_font_size = 20;
-      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_family = "Agave";
       autosave = {
         after_delay = { milliseconds = 1000; };
       };
