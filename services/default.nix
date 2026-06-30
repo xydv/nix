@@ -18,6 +18,7 @@
 
   services.flatpak.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  # services.cloudflare-warp.enable = true;
+  services.cloudflare-warp.enable = true;
   # services.tailscale.enable = true;
+  services.fprintd.enable = true;
 }

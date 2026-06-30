@@ -12,6 +12,10 @@
 
   security.rtkit.enable = true;
   security.polkit.enable = true;
+  security.pam.services = {
+    login.fprintAuth = false;
+    kde.fprintAuth = false;
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -23,7 +27,7 @@
   users.users.aditya = {
     isNormalUser = true;
     description = "aditya";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "kvm" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
@@ -38,25 +42,17 @@
     })
     helix
     bruno
-    # chromium
     kdePackages.kdenlive
     antigravity
     zed-editor
     devenv
     nixd
     inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # simplex-chat-desktop
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # ayugram-desktop
     ente-desktop
     mpv
     cloudflare-warp
     materialgram
-    # ytm-player
-    fprintd
-    # telegram-bot-api
-    # tdl
   ];
 
   fonts.packages = with pkgs; [
