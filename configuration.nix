@@ -34,28 +34,13 @@
   };
 
   environment.systemPackages = with pkgs; [
-    bemenu
-    telegram-desktop
-    (discord.override {
-      withOpenASAR = true;
-      withMoonlight = true;
-    })
-    helix
-    bruno
-    kdePackages.kdenlive
-    antigravity
-    zed-editor
-    devenv
-    nixd
     inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ente-desktop
-    mpv
     cloudflare-warp
-    materialgram
   ];
 
   fonts.packages = with pkgs; [
+    adwaita-fonts
     andika
     agave
   ];

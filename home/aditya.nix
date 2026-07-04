@@ -28,8 +28,23 @@
   };
 
   home.packages = with pkgs; [
+    (discord.override {
+      withOpenASAR = true;
+      withMoonlight = true;
+    })
     unstable.pear-desktop
     unstable.cloudflared
+    unstable.telegram-desktop
+    unstable.zed-editor
+    unstable.antigravity
+    ente-desktop
+    mpv
+    kdePackages.kdenlive
+    helix
+    bruno
+    devenv
+    nixd
+    bemenu
   ];
 
   xdg.configFile."pipewire/pipewire.conf.d/99-input-denoising.conf".text = ''
