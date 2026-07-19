@@ -35,8 +35,7 @@
     unstable.pear-desktop
     unstable.cloudflared
     unstable.telegram-desktop
-    unstable.zed-editor
-    unstable.antigravity
+    antigravity
     ente-desktop
     mpv
     kdePackages.kdenlive
@@ -45,6 +44,11 @@
     devenv
     nixd
     bemenu
+    qbittorrent
+    typescript-language-server
+    bun
+    vscode-fhs
+    unstable.kotatogram-desktop
   ];
 
   xdg.configFile."pipewire/pipewire.conf.d/99-input-denoising.conf".text = ''

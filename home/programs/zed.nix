@@ -2,6 +2,7 @@
 
 {
   programs.zed-editor = {
+    package = pkgs.unstable.zed-editor;
     enable = true;
     extensions = ["crimson-theme"];
     userSettings = {
