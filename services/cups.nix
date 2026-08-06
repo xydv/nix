@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  services.printing.enable = true;
-  services.printing.cups-pdf.enable = true;
-  services.printing.drivers = with pkgs; [ hplip canon-cups-ufr2 ];
+  # services.printing.enable = true;
+  # # services.printing.cups-pdf.enable = true;
+  # services.printing.drivers = with pkgs; [ canon-cups-ufr2 ];
 }

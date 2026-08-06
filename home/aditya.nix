@@ -30,12 +30,10 @@
   home.packages = with pkgs; [
     (discord.override {
       withOpenASAR = true;
-      withMoonlight = true;
     })
     unstable.pear-desktop
     unstable.cloudflared
     unstable.telegram-desktop
-    antigravity
     ente-desktop
     mpv
     kdePackages.kdenlive
@@ -49,6 +47,9 @@
     bun
     vscode-fhs
     unstable.kotatogram-desktop
+    keybase
+    keybase-gui
+    kbfs
   ];
 
   xdg.configFile."pipewire/pipewire.conf.d/99-input-denoising.conf".text = ''

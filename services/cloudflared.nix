@@ -1,6 +1,6 @@
 {
   services.cloudflared = {
-    enable = true;
+    enable = false;
     tunnels = {
       "thinkpad" = {
         credentialsFile = "/home/aditya/.cloudflared/a3a0512b-6c48-44f9-b760-15d6cf7d1232.json";

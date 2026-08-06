@@ -40,13 +40,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ytm-player = {
-      url = "github:peternaame-boop/ytm-player";
+    antigravity-nix = {
+      url = "github:jacopone/antigravity-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    wrangler = {
+      url = "github:emrldnix/wrangler";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs: {
+    # for wrangler latest builds // https://github.com/emrldnix/wrangler#using-the-nar-cache
+    nix.settings = {
+      substituters = [ "https://wrangler.cachix.org" ];
+      trusted-public-keys = [ "wrangler.cachix.org-1:N/FIcG2qBQcolSpklb2IMDbsfjZKWg+ctxx0mSMXdSs=" ];
+    };
+
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [

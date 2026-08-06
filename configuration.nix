@@ -36,7 +36,13 @@
   environment.systemPackages = with pkgs; [
     inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.antigravity-nix.packages.x86_64-linux.google-antigravity-ide
+    inputs.antigravity-nix.packages.x86_64-linux.google-antigravity-cli
     cloudflare-warp
+    ayugram-desktop
+    wl-clipboard
+    alacritty
+    inputs.wrangler.packages.x86_64-linux.wrangler # i use wrangler for everything, so adding it to the system packages
   ];
 
   fonts.packages = with pkgs; [
